@@ -1,0 +1,93 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+.footer__subscription-header {
+    margin: 20px 0 0 20px;
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 26px;
+}
+.footer__caption {
+    margin: 14px 0 0 20px;
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+}
+.footer__subscribe {
+    margin: 60px 20px 0 20px;
+}
+.subscribe {
+    width: calc(100% - 40px);
+    display: grid;
+    grid-template-columns: 50% 21% 29%;
+    grid-template-rows: 31px 31px;
+    grid-template-areas: 
+    "name surname surname"
+    "email email submit";
+}
+.subscribe__input {
+    padding: 7px 0 7px 11px;
+    background-color: rgba(25, 29, 44, 1);
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #E1FD2C;
+    color: #E1FD2C;
+    box-sizing: border-box;
+}
+.subscribe__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E1FD2C;
+    border: none;
+    color: rgba(25, 29, 44, 1);
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.footer__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 120px 20px 0 20px;
+}
+.footer__logo-image {
+    width: 280px;
+    height: 58px;
+}
+.footer__copyright {
+    margin: 20px 0 20px 32px;
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 1px;
+}
+
+.subscribe__name {
+    grid-area: name;
+}
+.subscribe__surname {
+    grid-area: surname;
+}
+.subscribe__email {
+    grid-area: email;
+}
+.subscribe__submit {
+    grid-area: submit;
+}

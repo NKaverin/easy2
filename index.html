@@ -4,9 +4,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="page/style.css">
     <title>AUTO-MAGAZIN</title>
 </head>
-<body>
-    
+<body class="page">
+    <header class="header">
+        <div class="header__container">
+            <div class="header__menu menu">
+                <div class="menu-icon">
+                    <span class="menu-icon">
+                    </span>
+                </div>
+                <nav class="menu__body body__active">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a data-goto=".details" href="#" class="menu__link"> ФАКТЫ </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a data-goto=".gallery" href="#" class="menu__link"> ГАЛЕРЕЯ </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a data-goto=".press" href="#" class="menu__link"> ПРЕССА </a>
+                        </li>
+                    </ul>
+                    <button class="header__close-icon" type="button">
+                        <img src="./vendor/images/plus.svg" alt="крестик для закрытия формы">
+                    </button>
+                </nav>
+            </div>
+            <a href="#" class="header__logo">
+                <img src="./vendor/images/AUTO-MAGAZINE.svg" alt="логотип в виде надписи AUTO-MAGAZIN" class="header__logo-image">
+            </a>
+        </div>
+    </header>
+    <main class="main">
+        <section class="new-van">
+                <p class="new-van__car-brand">volkswagen T1</p>
+                <h1 class="new-van__header">Новая версия популярного микроавтобуса</h1>
+                <p class="new-van__caption">С ЭЛЕКТРО ДВИГАТЕЛЕМ</p>
+            <img class="new-van__car" src="./vendor/images/Van.jpg" alt="чёрно-белая фотография красивого микроавтобуса">
+            <button class="new-van__more-deatails">
+                Подробнее
+            </button>
+        </section>
+        <section class="details">
+            <div class="details__main-text">
+                <span class="details__highlight"> VW T1 Electro: </span> Отделение Volkswagen Commercial Vehicles представило концепт e-Bulli: классический вэн T1 1966 года 
+                с электрической силовой установкой. 
+                По словам производителя, проект получит коммерческое продолжение, и через фирму-партнера eClassics наборы для конверсии микроавтобусов в электрокары 
+                и уже готовые машины будут продавать частным клиентам.
+            </div>
+            <div class="details__list">
+                <h2 class="details__list-header">
+                    ПЛЮСЫ
+                </h2>
+                <ul>
+                    <li class="details__list-item">+ Экологичный</li>
+                    <li class="details__list-item">+ Экономный</li>
+                    <li class="details__list-item">+ Тихий</li>
+                </ul>
+            </div>
+            <div class="details__list">
+                <h2 class="details__list-header">
+                    МИНУСЫ
+                </h2>
+                <ul>
+                    <li class="details__list-item">- Дорогой</li>
+                    <li class="details__list-item">- Подзарядка</li>
+                </ul>
+            </div>            
+        </section>
+        <section class="gallery">
+            <div class="gallery__swiper swiper"> 
+                <div class="gallery__wrapper swiper-wrapper">
+                    <div class="gallery__slide swiper-slide">
+                        <img class="gallery__slider-image" src="./vendor/images/vanOnRoad.png" alt="красивый микроавтобус едет по дороге вдаль">
+                    </div>
+                    <div class="gallery__slide swiper-slide">
+                        <img class="gallery__slider-image" src="./vendor/images/vanForward.png" alt="внутри микроавтобуса, спереди, видно руль, передние сидеиния, коробку передач">
+                    </div>
+                    <div class="gallery__slide swiper-slide">
+                        <img class="gallery__slider-image" src="./vendor/images/vanAft.png" alt="внутри микроавтобуса, сзади, видно сидения, очень просторно, много людей вместится">
+                    </div>
+                </div>
+                <div class="gallery__swiper-bottom">
+                    <h2 class="gallery__header">Галерея</h2>
+                    <div class="gallery__arrows">
+                        <img class="gallery__swiper-left"  src="./vendor/images/arrowLeft.svg" alt="стрелка влево">
+                        <img class="gallery__swiper-right"  src="./vendor/images/arrowRight.svg" alt="стрелка вправо">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="press">
+            <h2 class="press__header">Пресса</h2>
+            <div class="press__swiper swiper"> 
+                <div class="press__wrapper swiper-wrapper">
+                    <div class="press__slide swiper-slide">
+                        <p class="press__main-text"> <span class="press__highlight">Engadget:</span> VW’s e-BULLI concept shows how your classic van can become an EV.</p>
+                    </div>
+                    <div class="press__slide swiper-slide">
+                        <p class="press__main-text"> <span class="press__highlight">Drive.ru:</span> Вэн Volkswagen e-Bulli скрестил классику с современной техникой. </p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="press__swiper-bottom"> 
+                <div class="press__pagination-wrapper">
+                    <div class="press__pagination"></div>
+                </div>
+                <div class="press__button-wrapper">
+                    <button class="press__read">Читать</button>
+                </div>
+            </div>          
+        </section>
+    </main>
+    <footer class="footer">
+        <h2 class="footer__subscription-header"> Подписка </h2>
+        <p class="footer__caption"> На новые спецвыпуски машин. </p>
+        <form class="footer__subscribe subscribe">
+            <input class="subscribe__input subscribe__name" type="text" value="ИМЯ" id="name">
+            <input class="subscribe__input subscribe__surname" type="text" value="ФАМИЛИЯ" id="surname">
+            <input class="subscribe__input subscribe__email" type="text" value="ПОЧТА" id="email">
+            <button class="subscribe__button subscribe__submit" type="submit" id="submit">ПОДПИСКА</button>
+        </form>
+        <a href="#" class="footer__logo">
+            <img src="./vendor/images/AUTO-MAGAZINE.svg" alt="логотип в виде надписи AUTO-MAGAZIN" class="footer__logo-image">
+        </a>
+        <p class="footer__copyright">© Auto-Magazine 2021</p> 
+    </footer>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+
 </body>
+
 </html>
