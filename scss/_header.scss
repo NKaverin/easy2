@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    border-bottom: 1px solid #E1FD2C;
+    border-bottom: 1px solid $color-secondary;
     
     &__container {
         max-width: 1440px;
@@ -24,7 +24,7 @@
         top: 16px;
         right: 14px;
         z-index: 15;
-        background-color: rgba(25, 29, 44, 1);
+        background-color: $color-main;
         border: 0;
         cursor: pointer;
     }
@@ -76,7 +76,7 @@
         height: 2px;
         width: 20px;
         transition: all 0.3s ease 0s;
-        background-color: #E1FD2C;
+        background-color: $color-secondary;
     }
     .menu-icon::before,
     .menu-icon::after{
@@ -103,7 +103,7 @@
     padding: 27px 0 0 20px;
     transition: left 0.3s ease 0s;
     z-index: 25;
-    background-color: rgba(25, 29, 44, 1);
+    background-color: $color-main;
 }
 
 .menu__list {
@@ -114,6 +114,7 @@
 .menu__list > li {
     margin: 0 0 0 0;
 }
+
 @media (min-width: 768px) {
     .menu__list {
         display: flex;
@@ -121,14 +122,14 @@
     }
 }
 .menu__link {
-    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    font-family: $font-family;
     font-style: normal;
     font-weight: normal;
     font-size: 11px;
     line-height: 16px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #E1FD2C;
+    color: $color-secondary;
 }
 .menu__link:hover {
     opacity: 0.6;

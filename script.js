@@ -11,10 +11,7 @@ const swiper2 = new Swiper('.press__swiper', {
         el: '.press__pagination',
         clickable: true,
         horizontalClass: '.press__pagination'
-    },
-
-    
-
+    }
 });
 
 
