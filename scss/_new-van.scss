@@ -6,40 +6,79 @@
     padding-bottom: 60px;
     border-bottom: 1px solid $color-secondary;
 
+    @media (min-width: 768px) {
+        margin-top: 99px;
+    }
+
+    @media (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 0;
+        padding: 150px 0 150px;
+        grid-template-areas: 
+        "car-brand car"
+        "header car"
+        "caption car"
+        "more-deatails car";
+    }
+
     &__car-brand {
+        grid-area: car-brand;
         font-family: $font-family;
         font-style: normal;
         font-weight: normal;
         font-size: 11px;
         line-height: 14px;
         text-transform: uppercase;
+        text-align: center;
+        @media (min-width: 768px) {
+            font-size: 19px;
+            line-height: 28px;
+        }
+        
     }
     
     &__header {
+        grid-area: header;
         font-family: $font-family;
         font-style: normal;
         font-weight: normal;
         font-size: 38px;
         line-height: 50px;
-        margin-top: 26px;
+        margin: 26px auto 0 auto;
         text-align: center;
+        width: 100%;
+        @media (min-width: 768px) {
+            max-width: 560px;
+            font-size: 65px;
+            line-height: 73px;
+            margin-top: 30px;
+        }    
     }
     &__caption {
+        grid-area: caption;
         font-family: $font-family;
         font-style: normal;
         font-weight: normal;
         font-size: 11px;
         line-height: 14px;
         margin-top: 30px;
+        @media (min-width: 768px) {
+            font-size: 19px;
+            line-height: 28px;
+            margin-top: 51px;
+        }
+        text-align: center;
     }
     &__more-deatails {
+        grid-area: more-deatails;
         padding: 0;
         border: none;
         font: inherit;
         color: inherit;
         background-color: transparent;
         cursor: pointer;
-        margin: 60px 20px 0 20px;
+        margin: 60px auto 0 auto;
         width: calc(100% - 40px);
         height: 62px;
         border: 1px solid #E1FD2C;
@@ -50,12 +89,27 @@
         line-height: 6px;
         letter-spacing: 1px;
         text-transform: uppercase;
+        max-width: 360px;
     }
     
     &__car {
-        width: 280px;
+        grid-area: car;
+        width: calc(100% - 40px);
+        object-fit: contain;
         height: 202px;
         margin: 60px 20px 0 20px;
+        max-width: 720px;
+        @media (min-width: 424px) {
+            height: auto;
+            max-height: 510px;
+            margin: 100px 34px 0 34px;
+            width: calc(100% - 68px);
+        }
+        @media (min-width: 1024px) {
+            margin: 0;
+            width: 100%;
+            object-fit: cover;
+        }
     }
 }
 

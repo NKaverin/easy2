@@ -23,7 +23,7 @@ if (menuLinks.length > 0) {
             let menuLink = e.target;
             if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
                 let gotoBlock = document.querySelector(menuLink.dataset.goto);
-                let gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
+                let gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY;
                 window.scrollTo({
                     top: gotoBlockValue,
                     behavior: 'smooth'
