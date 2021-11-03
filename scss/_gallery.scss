@@ -23,6 +23,7 @@
         height: 202px;
         @media (min-width: 375px) {
             height: auto;
+            max-height: 510px;
         }
     }
     &__swiper-bottom {
@@ -60,6 +61,9 @@
     &__arrows {
         display: flex;
         flex-direction: row;
+        @media (min-width: 768px) {
+            margin-top: 4px;
+        }
     }
     
     &__header {
