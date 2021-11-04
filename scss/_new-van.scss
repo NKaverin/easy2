@@ -21,6 +21,7 @@
         "header car"
         "caption car"
         "more-deatails car";
+        align-items: initial;
     }
 
     &__car-brand {
@@ -36,7 +37,9 @@
             font-size: 19px;
             line-height: 28px;
         }
-        
+        @media (min-width: 1024px) {
+            margin-top: 30px;
+        }        
     }
     
     &__header {
@@ -55,6 +58,9 @@
             line-height: 73px;
             margin-top: 30px;
         }    
+        @media (min-width: 1024px) {
+            margin-top: 0px;
+        }    
     }
     &__caption {
         grid-area: caption;
@@ -68,6 +74,9 @@
             font-size: 19px;
             line-height: 28px;
             margin-top: 51px;
+        }
+        @media (min-width: 1024px) {
+            margin-top: 10px;
         }
         text-align: center;
     }
@@ -94,6 +103,13 @@
         @media (min-width: 768px) {
             margin-top: 100px;
         }
+        @media (min-width: 1024px) {
+            margin-top: 30px;
+        }
+        &:hover {
+            color: $color-main;
+            background-color: $color-secondary;
+        }
     }
     
     &__car {
@@ -103,10 +119,10 @@
         height: 202px;
         margin: 60px 20px 0 20px;
         max-width: 720px;
-        @media (min-width: 424px) {
+        @media (min-width: 768px) {
             height: auto;
             min-width: 700px;
-            max-height: 510px;
+            max-height: 540px;
             margin: 100px 34px 0 34px;
             width: calc(100% - 68px);
             object-fit: fill;
