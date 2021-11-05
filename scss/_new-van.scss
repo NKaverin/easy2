@@ -33,6 +33,7 @@
         line-height: 14px;
         text-transform: uppercase;
         text-align: center;
+        margin: 0;
         @media (min-width: 768px) {
             font-size: 19px;
             line-height: 28px;
@@ -69,7 +70,7 @@
         font-weight: normal;
         font-size: 11px;
         line-height: 14px;
-        margin-top: 30px;
+        margin: 30px 0 0 0;
         @media (min-width: 768px) {
             font-size: 19px;
             line-height: 28px;
@@ -92,7 +93,7 @@
         width: calc(100% - 40px);
         height: 62px;
         border: 1px solid #E1FD2C;
-        font-family: Source Sans Pro;
+        font-family: $font-family;
         font-style: normal;
         font-weight: normal;
         font-size: 15px;
@@ -115,22 +116,23 @@
     &__car {
         grid-area: car;
         width: calc(100% - 40px);
-        object-fit: contain;
+        object-fit: fill;
         height: 202px;
         margin: 60px 20px 0 20px;
-        max-width: 720px;
-        @media (min-width: 768px) {
+        max-width: 280px;
+        @media (min-width: 768px) { 
             height: auto;
+            max-width: none;
             min-width: 700px;
-            max-height: 540px;
+            max-height: 510px;
             margin: 100px 34px 0 34px;
             width: calc(100% - 68px);
-            object-fit: fill;
         }
         @media (min-width: 1024px) {
             margin: 0;
             width: 100%;
             min-width: 512px;
+            max-height: none;
         }
     }
 }

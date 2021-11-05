@@ -12,8 +12,8 @@
     <header class="header">
         <div class="header__container">
             <div class="header__menu menu">
-                <div class="menu-icon">
-                    <span class="menu-icon">
+                <div class="menu__menu-icon">
+                    <span class="menu__menu-icon-span">
                     </span>
                 </div>
                 <nav class="menu__body">
@@ -44,19 +44,19 @@
             <h1 class="new-van__header">Новая версия популярного микроавтобуса</h1>
             <p class="new-van__caption">С ЭЛЕКТРО ДВИГАТЕЛЕМ</p>
             <img class="new-van__car" src="./vendor/images/Van.jpg" alt="чёрно-белая фотография красивого микроавтобуса">
-            <button class="new-van__more-deatails">
+            <button class="new-van__more-deatails" type="button">
                 Подробнее
             </button>
         </section>
         <section class="details">
-            <div class="details__main-text">
+            <p class="details__main-text">
                 <span class="details__highlight"> VW T1 Electro: </span> Отделение Volkswagen Commercial Vehicles представило концепт e-Bulli: классический вэн T1 1966 года с&nbsp;электрической силовой установкой. По&nbsp;словам производителя, проект получит коммерческое продолжение, и&nbsp;через фирму-партнера eClassics наборы для конверсии микроавтобусов в&nbsp;электрокары и&nbsp;уже готовые машины будут продавать частным клиентам.
-            </div>
+            </p>
             <div class="details__list">
                 <h2 class="details__list-header">
                     ПЛЮСЫ
                 </h2>
-                <ul>
+                <ul class="details__list-of-items">
                     <li class="details__list-item">+ Экологичный</li>
                     <li class="details__list-item">+ Экономный</li>
                     <li class="details__list-item">+ Тихий</li>
@@ -66,7 +66,7 @@
                 <h2 class="details__list-header">
                     МИНУСЫ
                 </h2>
-                <ul>
+                <ul class="details__list-of-items">
                     <li class="details__list-item">- Дорогой</li>
                     <li class="details__list-item">- Подзарядка</li>
                 </ul>
@@ -88,8 +88,12 @@
                 <div class="gallery__swiper-bottom">
                     <h2 class="gallery__header">Галерея</h2>
                     <div class="gallery__arrows">
-                        <img class="gallery__swiper-left"  src="./vendor/images/arrowLeft.svg" alt="стрелка влево">
-                        <img class="gallery__swiper-right"  src="./vendor/images/arrowRight.svg" alt="стрелка вправо">
+                        <button class="gallery__arrow-button gallery__arrow-button_type_left" type="button">
+                            <img class="gallery__swiper-arrow"  src="./vendor/images/arrowLeft.svg" alt="стрелка влево">
+                        </button>
+                        <button class="gallery__arrow-button gallery__arrow-button_type_right" type="button">
+                            <img class="gallery__swiper-arrow"  src="./vendor/images/arrowLeft.svg" alt="стрелка вправо">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -112,7 +116,7 @@
                     <div class="press__pagination"></div>
                 </div>
                 <div class="press__button-wrapper">
-                    <button class="press__read">Читать</button>
+                    <button class="press__read" type="button">Читать</button>
                 </div>
             </div>          
         </section>
@@ -120,10 +124,10 @@
     <footer class="footer">
         <h2 class="footer__subscription-header"> Подписка </h2>
         <p class="footer__caption"> На новые спецвыпуски машин. </p>
-        <form class="footer__subscribe subscribe">
-            <input class="subscribe__input subscribe__name" type="text" value="ИМЯ" id="name">
-            <input class="subscribe__input subscribe__surname" type="text" value="ФАМИЛИЯ" id="surname">
-            <input class="subscribe__input subscribe__email" type="text" value="ПОЧТА" id="email">
+        <form class="footer__subscribe subscribe" name="subscribe" action="#">
+            <input class="subscribe__input subscribe__input_type_name" type="text" placeholder="ИМЯ" id="name">
+            <input class="subscribe__input subscribe__input_type_surname" type="text" placeholder="ФАМИЛИЯ" id="surname">
+            <input class="subscribe__input subscribe__input_type_email" type="text" placeholder="ПОЧТА" id="email">
             <button class="subscribe__button subscribe__submit" type="submit" id="submit">ПОДПИСКА</button>
         </form>
         <a href="#" class="footer__logo">

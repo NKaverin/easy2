@@ -1,7 +1,5 @@
 .gallery {
-
     padding-bottom: 20px;
-
     @media (min-width: 768px) {
         padding-bottom: 50px
     }
@@ -13,6 +11,7 @@
     &__slide {
         width: 80%;
         padding: 20px 20px 50px 20px;
+        box-sizing: border-box;
         @media (min-width: 375px) {
             padding: 34px 34px 50px 34px;
         }
@@ -41,6 +40,7 @@
             max-height: none;
         }    
     }
+
     &__swiper-bottom {
         display: flex;
         flex-direction: row;
@@ -50,37 +50,44 @@
         }  
     }
     
-    &__swiper-left {
-        width: 24px;
-        height: 20px;
-        object-fit: fill;
-        @media (min-width: 768px) {
-            width: 42px;
-            height: 34px;
-        }
-        &:hover {
-            cursor: pointer;
-        }
+    &__arrow-button {
+        border: none;
+        margin: 0;
+        padding: 0;
+        background-color: $color-main;
+        width: 42px;
+        height: 34px;
     }
-    &__swiper-right {
-        margin: 0 23px 0 16px;
-        width: 24px;
-        height: 20px;
-        object-fit: fill;
-        @media (min-width: 768px) {
-            width: 42px;
-            height: 34px;
-            margin: 0 50px 0 30px;
-        }
-        &:hover {
-            cursor: pointer;
-        }
-    }
+
     &__arrows {
         display: flex;
         flex-direction: row;
+        margin-right: 23px;
         @media (min-width: 768px) {
             margin-top: 4px;
+            margin-right: 50px;
+        }
+    }
+
+    &__swiper-arrow {
+        width: 24px;
+        height: 20px;
+        object-fit: fill;
+        @media (min-width: 768px) {
+            width: 42px;
+            height: 34px;
+        }
+        &:hover {
+            cursor: pointer;
+            opacity: 0.6;
+        }
+    }
+
+    &__arrow-button_type_right {
+        margin-left: 16px;
+        transform: rotate(180deg);
+        @media (min-width: 768px) {
+            margin-left: 30px;
         }
     }
     

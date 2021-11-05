@@ -17,6 +17,8 @@
         line-height: 27px;
         border-bottom: 1px solid $color-secondary;
         padding: 18px 20px 18px 20px;
+        box-sizing: border-box;
+        margin: 0;
         @media (min-width: 768px) {
             width: 100%;   
             font-size: 30px;
@@ -49,6 +51,7 @@
         @media (min-width: 1024px) {
             width: 25%;   
         }
+        box-sizing: border-box;
     }
     
     &__list-header {
@@ -59,6 +62,7 @@
         line-height: 22px;
         letter-spacing: 2px;
         padding: 20px 20px 40px 0;
+        margin: 0;
         @media (min-width: 768px) {
             font-size: 30px;
             line-height: 37px;
@@ -66,12 +70,19 @@
         }
     } 
     
+    &__list-of-items {
+        margin: 0;
+        padding: 0;
+    }
+    
     &__list-item {
         font-family: $font-family;
         font-style: normal;
         font-weight: 300;
         font-size: 16px;
         line-height: 20px;  
+        @include list-unstyled;
+        margin: 0;
         @media (min-width: 768px) {
             font-size: 21px;
             line-height: 32px;

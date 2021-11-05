@@ -85,6 +85,7 @@
         line-height: 13px;
         letter-spacing: 1px;
         grid-area: copyright;
+        box-sizing: border-box;
         @media (min-width: 768px) {
             margin: auto 50px 50px auto;
         }
@@ -100,6 +101,7 @@
     "name surname surname"
     "email email submit";
     grid-area: subscribe;
+    box-sizing: border-box;
     @media (min-width: 768px) {
         width: 100%;
         margin: 0;
@@ -109,7 +111,6 @@
     }
     @media (min-width: 1024px) {
         padding-right: calc(100% - 390px);
-
         border-right: 1px solid $color-secondary;
     }
     
@@ -126,6 +127,9 @@
         border: 1px solid $color-secondary;
         color: $color-secondary;
         box-sizing: border-box;
+        &::placeholder {
+            color: $color-secondary;
+        }    
     }
 
     &__button {
@@ -142,22 +146,22 @@
         line-height: 13px;
         letter-spacing: 1px;
         text-transform: uppercase;
+        grid-area: submit;
+        &:hover {
+            cursor: pointer;
+        }
     }
     
-    &__name {
+    &__input_type_name {
         grid-area: name;
     }
 
-    &__surname {
+    &__input_type_surname {
         grid-area: surname;
     }
 
-    &__email {
+    &__input_type_email {
         grid-area: email;
-    }
-
-    &__submit {
-        grid-area: submit;
     }
 
 }

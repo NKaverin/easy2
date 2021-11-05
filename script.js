@@ -1,7 +1,7 @@
 const swiper = new Swiper('.gallery__swiper', {
     navigation: {
-        nextEl: '.gallery__swiper-right',
-        prevEl: '.gallery__swiper-left',
+        nextEl: '.gallery__arrow-button_type_right',
+        prevEl: '.gallery__arrow-button_type_left',
     },
     spaceBetween: 40,
 });
@@ -40,11 +40,16 @@ readButton.addEventListener('click', function(){
     }
 })
 
-let burger = document.querySelector('.menu-icon');
+let burger = document.querySelector('.menu__menu-icon');
 burger.addEventListener('click', function(e){
     document.querySelector('.menu__body').classList.toggle('menu_condition_active')
 })
 let closeIcon = document.querySelector('.header__close-icon');
 closeIcon.addEventListener('click', function(e){
     document.querySelector('.menu__body').classList.toggle('menu_condition_active')
+})
+
+let submitButton = document.querySelector('#submit');
+submitButton.addEventListener('click', function(e){
+    e.preventDefault();
 })
