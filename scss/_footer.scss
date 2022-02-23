@@ -1,0 +1,169 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "subscription-header logo"
+        "caption ."
+        "subscribe copyright";
+    }
+
+    &__subscription-header {
+        margin: 20px 0 0 20px;
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 26px;
+        grid-area: subscription-header;
+        @media (min-width: 768px) {
+            font-size: 46px;
+            line-height: 46px;
+            margin: 50px 0 0 50px;
+        }
+        @media (min-width: 1024px) {
+            margin-top: 0;
+            padding-top: 50px;
+            border-right: 1px solid $color-secondary;
+        }
+    }
+
+    &__caption {
+        margin: 14px 0 0 20px;
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+        grid-area: caption;
+        @media (min-width: 768px) {
+            margin: 16px 0 0 50px;
+            font-size: 19px;
+            line-height: 28px;
+        }
+        @media (min-width: 1024px) {
+            margin-top: 0;
+            padding-top: 16px;
+            border-right: 1px solid $color-secondary;
+        }
+    }
+
+    &__subscribe {
+        margin: 60px 20px 0 20px;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 120px 20px 0 20px;
+        grid-area: logo;
+        @media (min-width: 768px) {
+            margin: 50px 50px 0 0;
+            justify-content: end;
+        }
+    }
+
+    &__logo-image {
+        width: 280px;
+        height: 58px;
+        @media (min-width: 768px) {
+            width: 184px;
+            height: 38px;
+        }
+    }
+
+    &__copyright {
+        margin: 20px 0 20px 32px;
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 13px;
+        letter-spacing: 1px;
+        grid-area: copyright;
+        box-sizing: border-box;
+        @media (min-width: 768px) {
+            margin: auto 50px 50px auto;
+        }
+    }
+}
+
+.subscribe {
+    width: calc(100% - 40px);
+    display: grid;
+    grid-template-columns: 50% 21% 29%;
+    grid-template-rows: 31px 31px;
+    grid-template-areas: 
+    "name surname surname"
+    "email email submit";
+    grid-area: subscribe;
+    box-sizing: border-box;
+    @media (min-width: 768px) {
+        width: 100%;
+        margin: 0;
+        padding: 64px 0 50px 50px;
+        grid-template-columns: 170px 90px 80px;
+    ;
+    }
+    @media (min-width: 1024px) {
+        padding-right: calc(100% - 390px);
+        border-right: 1px solid $color-secondary;
+    }
+    
+    &__input {
+        padding: 7px 0 7px 11px;
+        background-color: $color-main;
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 9px;
+        line-height: 18px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border: 1px solid $color-secondary;
+        color: $color-secondary;
+        box-sizing: border-box;
+        &::placeholder {
+            color: $color-secondary;
+        }    
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-secondary;
+        border: none;
+        color: $color-main;
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        grid-area: submit;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    &__input_type_name {
+        grid-area: name;
+    }
+
+    &__input_type_surname {
+        grid-area: surname;
+    }
+
+    &__input_type_email {
+        grid-area: email;
+    }
+
+}
+
+
